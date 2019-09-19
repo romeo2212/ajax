@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="test-local-storage" style="display: none;"></div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="panel panel-primary actions-panel auth-panel">
+					<div class="panel-heading">Форма</div>
+					<div class="panel-body">
+						<form method="POST">
+							<div class="form-group">
+								<input type="text" class="form-control" name="login" placeholder="Login">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="password" placeholder="Pasword">
+							</div>
+							<input type="hidden" name="action" value="auth">
+							<div class="form-group">
+								<button type="submit" class="btn btn-danger">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="panel panel-primary actions-panel user-panel">
+					<div class="panel-heading">Кабинет</div>
+					<div class="panel-body">
+						<button class="btn btn-info getDataBtn">Get User Data</button>
+						<button class="btn btn-danger logOutBtn">LogOut</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-10 col-sm-offset-1 user-data-wrap" >
+				<div class="panel panel-primary">
+					<div class="panel-heading" data-item="full_name" data-type="text"></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-5">
+								<img class="thumbnail img-responsive" src="1px.png" alt="" data-item="avatar" data-type="img">
+							</div>
+							<div class="col-sm-7">
+								<div class="user-info">
+									<table class="table table-striped">
+										<tbody>
+											<tr>
+												<td>Name</td>
+												<td data-item="full_name" data-type="text"></td>
+											</tr>
+											<tr>
+												<td>Age</td>
+												<td data-item="age" data-type="text"></td>
+											</tr>
+											<tr>
+												<td>Description</td>
+												<td data-item="description" data-type="text"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="user-gallery"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
